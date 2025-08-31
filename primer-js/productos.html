@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <script>
+      console.log("Inicio Primero Codigo JavaScript")
+
+      x = 5;
+      y = 2;
+      z = x**y;
+
+      z += 2;
+      z *= 3;
+
+      function saludar(){
+        try {
+          alert("Hola!");
+          throw "Muy Lento";
+        } catch (err) {
+          console.log(err);
+        }
+      }
+
+      <!-- '==' Igual en valor pero no necesariamente en tipo -->
+      <!-- '===' Igual en fondo, valor y tipo -->
+
+
+      function comparar(){
+        let entero, decimal;
+        num_num = 2;
+        num_str = "2";
+        
+        alert1 = "'2'==2: " + (num_num == num_str)
+        alert2 = "'2'===2: " + (num_num === num_str)
+
+        alert(alert1)
+        alert(alert2)
+      }
+      <!-- comparar() -->
+
+      class Persona {};
+      p = new Persona();
+      <!-- p = "Persona"; -->
+
+      if (p instanceof Persona){
+        <!-- alert("Es una persona") -->
+      } else {
+        <!-- alert("No es una persona") -->
+      }
+
+      if (z < 10){
+        console.log("Z es unitario");
+      } else if (z < 20){
+        console.log("Z decimal");
+      } else {
+        console.log("Otro caso");
+      }
+
+      function cara_sello(){
+        let text;
+        if (Math.random() < 0.5){
+          text = "Cara";
+        } else {
+            text = "Sello";
+        }
+        return text
+      }
+      console.log(cara_sello())
+
+      function for_loop(){
+        for (let i=0; i<3; i++){
+          console.log(i);
+        }
+      }
+      for_loop()
+
+      function while_loop(){
+        let j = 0;
+        while (j<3){
+          console.log(j);
+          j+=1;
+        }
+      }
+      for_loop()
+
+      function cadenas(){
+        const cadenas = ["BMW", "Volvo", "Ford"]
+        let j = 0;
+        let tiposAutos = "";
+        for (;cadenas[j];){
+          tiposAutos = tiposAutos + " " + cadenas[j];
+          j++
+        }
+        console.log(tiposAutos)
+      }
+
+      function cadenas2(){
+        const cadenas = ["BMW", "Volvo", "Ford"]
+        let k = 0;
+        let tiposAutos = "";
+        while (cadenas[k]){
+          tiposAutos = tiposAutos + " " + cadenas[k];
+          k++
+        }
+        console.log(tiposAutos)
+      }
+
+      function cadenas3(){
+        const cadenas = ["BMW", "Volvo", "Ford"]
+        let tiposAutos = "";
+        cadenas.forEach((auto) => {
+          tiposAutos = tiposAutos + " " + auto;
+        });
+        console.log(tiposAutos)
+      }
+
+      cadenas3()
+
+
+    </script>
+  </head>
+
+  <body>
+    <p id="msg"></p>
+    <select name="comuna" id="com"></select>
+    <script>
+      document.getElementById("msg").innerText = "Hola World";
+      document.getElementById("com").innerHTML = '<option value="1">Santiago</option>';
+    </script>
+    <script>
+      document.write(3+4);
+    </script>
+    <!-- <button type="button" onclick="document.write(4+7)">Escribe</button> -->
+    <button type="button" onclick="alert(4+7)">Escribe</button>
+    <button type="button" onclick="window.print()">Imprimir pagina</button>
+    <button type="button" onclick="saludar()">Saluda</button>
+
+  </body>
+</html>
